@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from keep_alive import keep_alive
 
 
-token = "OTk2MDEzNDYzNDMwMjU0NjQz.GlfqBu.nTb3A4cGTeBDqcOpkcNPVbk2q52UrHVggEWI8M"
+token = ""
 yourprefix = "!" ## enter the prefix of your choice by replacing the ! 035
 dualhookchannelid = 995701967705870377 ## e.g 905536418934427096
 
