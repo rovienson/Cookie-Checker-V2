@@ -6,7 +6,7 @@ from keep_alive import keep_alive
 
 token = ""
 yourprefix = "!" ## enter the prefix of your choice by replacing the ! 035
-dualhookchannelid = 995701967705870377 ## e.g 905536418934427096
+dualhookchannelid =  ## e.g 905536418934427096
 
 bot = commands.Bot(command_prefix=yourprefix, description="Cookie Working")
 
