@@ -254,7 +254,7 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.do_not_disturb,
                               activity=discord.Activity(
                                   type=discord.ActivityType.playing,
-                                  name="check"))
+                                  name="!check yourcookie"))
     print('Working')
 
     ## just startup event which sets bot activity to "Playing Cookie Checker"
